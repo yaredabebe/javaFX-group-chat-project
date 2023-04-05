@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientsocket.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="homePage" layoutX="40.0" layoutY="87.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="nametextField" layoutX="28.0" layoutY="288.0" onAction="#sendName" prefHeight="30.0" prefWidth="345.0" />
+            <Text fx:id="error" fill="RED" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="error" textAlignment="CENTER" visible="false" wrappingWidth="401.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Your name" textAlignment="CENTER" wrappingWidth="401.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+            <Button fx:id="sendNameButton" layoutX="180.0" layoutY="352.0" mnemonicParsing="false" onAction="#sendName" text="join" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="messagePage" layoutY="229.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ListView fx:id="listView" layoutY="104.0" onMouseClicked="#listViewClicked" prefHeight="496.0" prefWidth="151.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="251.0" AnchorPane.topAnchor="104.0" />
+            <TextArea fx:id="mesageTextArea" layoutX="150.0" layoutY="104.0" prefHeight="456.0" prefWidth="251.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0" />
+            <Text fx:id="selectedListName" fill="#0505ff" layoutX="235.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="all" wrappingWidth="166.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <TextField fx:id="messageTextField" layoutX="150.0" layoutY="560.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="204.0" promptText="enter message">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="sendButton" layoutX="359.0" layoutY="558.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="33.0" prefWidth="42.0" text="send" />
+            <Text fx:id="userName" layoutX="1.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="401.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="8.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="send to :" textAlignment="CENTER" wrappingWidth="85.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
